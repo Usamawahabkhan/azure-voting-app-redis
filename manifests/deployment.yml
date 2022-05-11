@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: usamawahabkhanazurevotingappredis 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: usamawahabkhanazurevotingappredis
+  template:
+    metadata:
+      labels:
+        app: usamawahabkhanazurevotingappredis 
+    spec:
+      containers:
+        - name: usamawahabkhanazurevotingappredis 
+          image: demoaksacraz030.azurecr.io/usamawahabkhanazurevotingappredis
+          ports:
+          - containerPort: 80
